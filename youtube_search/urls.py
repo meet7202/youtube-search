@@ -15,7 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.conf.urls import include, url, re_path
+from django.conf import settings
+from rest_framework.routers import DefaultRouter
+from .views import YTListAPIViewset
+from rest_framework_swagger.views import get_swagger_view
+
+schema_view = get_swagger_view(title="YT Fam API")
+
+router = DefaultRouter()
+router.register(r'^search', YTListAPIViewset)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    url(r'^$', schema_view),
+    path('', include(router.urls))
 ]
