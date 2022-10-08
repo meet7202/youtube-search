@@ -21,7 +21,7 @@ from rest_framework.routers import DefaultRouter
 from .views import YTListAPIViewset
 from rest_framework_swagger.views import get_swagger_view
 
-schema_view = get_swagger_view(title="YT Fam API")
+schema_view = get_swagger_view(title="Youtube API")
 
 router = DefaultRouter()
 router.register(r'^search', YTListAPIViewset)

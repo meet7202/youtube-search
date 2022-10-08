@@ -79,7 +79,6 @@ class YoutubeVideo(models.Model):
             thumbnail_key=YoutubeVideo.get_thum_key(data['snippet']['thumbnails'])
         )
         yt_video.save()
-        #print(tags)
         if tags:
             yt_video.key_words.add(*tags)
 
