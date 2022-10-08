@@ -35,7 +35,7 @@ Non-Docker way
   http://localhost:8002/search/?q=<search_string1>
 
 
-# Requirements Achieved in project:
+# Features of project:
 
 1. Server calls the YouTube API continuously in background (async) with celery beat and as a add on we can configure scheduling by admin.
 
